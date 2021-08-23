@@ -49,5 +49,12 @@ export class Triangle { //triangle é o nome da classe
           ladoA + ladoC >= ladoB &&
           ladoB + ladoC >= ladoA);
    }
-
+ get isDegenerate () { //soma de 2 lados é = ao 3º lado
+       var ladoA = this.lados[0];
+       var ladoB = this.lados[1];
+       var ladoC = this.lados[2];
+   
+return (ladoA > 0 && ladoB > 0 && ladoC > 0) && 
+(ladoA + ladoB == ladoC || ladoA + ladoC == ladoB || ladoB + ladoC == ladoA); //degenerado
+}
  };
