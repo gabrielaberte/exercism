@@ -2,6 +2,7 @@
 
 */
 
-export const countWords = () => {
-  throw new Error('Remove this statement and implement this function');
+export const countWords = (texto) => {
+  let palavras = texto.split(/\s/);
+  console.log(palavras)
 };

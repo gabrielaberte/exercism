@@ -34,6 +34,35 @@ describe('Resistor Color Trio', () => {
       makeLabel({ value: 470, unit: 'kiloohms' })
     );
   });
+  test('Yellow and violet and green', () => {
+    expect(new ResistorColorTrio(['yellow', 'violet', 'green']).label).toEqual(
+      makeLabel({ value: 4.7, unit: 'megaohms' })
+    );
+  });
+
+  test('Yellow and violet and blue', () => {
+    expect(new ResistorColorTrio(['yellow', 'violet', 'blue']).label).toEqual(
+      makeLabel({ value: 47, unit: 'megaohms' })
+    );
+  });
+
+  test('Yellow and violet and violet', () => {
+    expect(new ResistorColorTrio(['yellow', 'violet', 'violet']).label).toEqual(
+      makeLabel({ value: 470, unit: 'megaohms' })
+    );
+  });
+
+  test('Yellow and violet and grey', () => {
+    expect(new ResistorColorTrio(['yellow', 'violet', 'grey']).label).toEqual(
+      makeLabel({ value: 4.7, unit: 'gigaohms' })
+    );
+  });
+
+  test('Yellow and violet and white', () => {
+    expect(new ResistorColorTrio(['yellow', 'violet', 'white']).label).toEqual(
+      makeLabel({ value: 47, unit: 'gigaohms' })
+    );
+  });
 
   // optional: error
   test('Invalid color', () => {
@@ -41,4 +70,5 @@ describe('Resistor Color Trio', () => {
       () => new ResistorColorTrio(['yellow', 'purple', 'black']).label
     ).toThrowError(/invalid color/);
   });
+  
 });
