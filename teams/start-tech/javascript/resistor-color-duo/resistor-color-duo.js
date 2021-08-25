@@ -17,5 +17,8 @@ export const decodedValue = (colorArray) => {//aqui é uma array, n pode 2 input
   return color[colorArray[0]]*10 + color[colorArray[1]]
   //const result = color[colorArray[0]] + color[colorArray[1]];
   //return +result ->se for em formato string
+//return +('' + colorCodes[colors[0]] + colorCodes[colors[1]]);
+
+
 };
 
