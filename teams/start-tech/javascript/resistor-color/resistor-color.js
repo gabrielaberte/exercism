@@ -16,3 +16,17 @@ export const colorCode = (color) => {  //pessoa entra com a cor e vai receber o 
   return obj[color]
 };
 export const COLORS = Object.keys(obj); //chamando a classe obj em q mostre um array com as chaves
+console.log(COLORS);
+
+export const valorCode = (valor) => {
+  var valores = Object.values(obj);
+  console.log(valores)
+  for (let index = 0; index < valores.length; index++) {
+    if (valores[index] === valor ) {
+      var keys = Object.keys(obj);
+      console.log(keys)
+      return keys[index];
+    } 
+  }
+  return undefined; 
+}

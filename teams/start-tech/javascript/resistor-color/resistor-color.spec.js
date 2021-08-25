@@ -1,4 +1,4 @@
-import { colorCode, COLORS } from './resistor-color';
+import { valorCode, colorCode, COLORS } from './resistor-color';
 
 describe('ResistorColor', () => {
   describe('Color codes', () => {
@@ -29,4 +29,18 @@ describe('ResistorColor', () => {
       'white',
     ]);
   });
+  
+    describe('valoeCode', () => {
+      test('Black', () => {
+        expect(valorCode(0)).toEqual('black');
+      });
+  
+      test('White', () => {
+        expect(valorCode(9)).toEqual('white');
+      });
+  
+      test('Orange', () => {
+        expect(valorCode(3)).toEqual('orange');
+      });
+    });
 });
