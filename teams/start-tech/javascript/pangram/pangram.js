@@ -4,7 +4,7 @@ export const isPangram = (frase) => {
     if (frase === ('')) {return false};
   
   let fraseMinuscula = frase.toLowerCase()  //transformando em letra minuscula
-  let silabasSeparadas = fraseMinuscula.match(/([a-z])/g);//separando a string por palavras
+  let silabasSeparadas = fraseMinuscula.match(/([a-z])/g);//separando a string por silabas
   const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
   for (let i=0; i<alfabeto.length; i++){  // o laço for será executado para todas as letras do alfabeto
