@@ -3,6 +3,8 @@
 // convenience to get you started writing code faster.
 //
 
-export const parse = (nome) => {
-  throw new Error('Remove this statement and implement this function');
-};teste
+export const parse = (frase) => {
+  const separandoPalavras = frase.replace('_', '').match(/(\w+)('\w+)?/g);
+  var filtrandoPalavras = separandoPalavras.filter(w => w).filter(w => w !== '-');
+console.log(filtrandoPalavras)          //se w for true coloque ele na nova array
+};
