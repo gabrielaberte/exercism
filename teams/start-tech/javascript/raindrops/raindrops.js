@@ -18,7 +18,15 @@ export const convert = (numero) => {
  return rainDrop;
 };
 
+/*
+let rainDrop ='';
+!(numero % 3) ? rainDrop += 'Pling' : '';
+!(numero % 5) ? rainDrop += 'Plang' : '';
+!(numero % 7) ? rainDrop += 'Plong' : '';
+if (!rainDrop) rainDrop += numero
+return rainDrop;
 
+*/
 
 
 
